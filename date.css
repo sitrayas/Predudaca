@@ -1,26 +1,29 @@
-body{
-    background-color: blue;
-    }
-    
-    form{
-    text-align: center;
-    padding: 20px;
-    }
-    
-    #resultado{
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    }
-    
-    input[type="date"]{
-    border: none;
-    border-bottom: 2px solid black;
-    }
-    
-    button{
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    }
+*{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input {
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+.titulo{
+	font-size: 30px;
+}
+
+button{
+	background-color:rgb(0, 182, 204);
+	padding: 10px 10px;
+	color: white;
+	font-size: 15px;
+	border-radius: 5px;
+	border: cyan;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: white;
+	color: rgb(0, 182, 204);
+	transition: 0.5s;
+	cursor: pointer;
+}
