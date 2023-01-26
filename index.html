@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculadora de fecha de parto</title>
+        <link rel="stylesheet" type="text/css" href="date.css">
+  </head>
+    
+    <body>
+        
+        <form>
+            <label for="ultima-regla">Ingrese la Fecha de la última regla:</label><br>
+            <input type="date" id="ultima-regla"><br><br>
+            <button type="button" onclick="calcularFechaParto()">Calcular fecha de parto</button>
+          </form>
+
+
+<p id="resultado"></p>
+
+<script>
+    function calcularFechaParto() {
+      // Obtiene la fecha de la última regla del formulario
+      let ultimaRegla = document.getElementById("ultima-regla").value;
+      
+      // Crea un objeto de fecha a partir de la última regla
+      let fecha = new Date(ultimaRegla);
+      
+      // Suma un año a la fecha
+      fecha.setFullYear(fecha.getFullYear() + 1);
+      
+      // Resta 3 meses a la fecha
+      fecha.setMonth(fecha.getMonth() - 3);
+      
+      // Suma 7 días a la fecha
+      fecha.setDate(fecha.getDate() + 7);
+      
+      // Obtiene el día, mes y año de la fecha resultante
+      let dia = fecha.getDate();
+      let mes = fecha.getMonth();
+      let anio = fecha.getFullYear();
+      
+
+
+       // Array con los nombres de los meses
+  let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  
+  // Obtiene el nombre del mes
+  let nombreMes = meses[mes];
+
+
+      // Muestra el resultado en la página
+      document.getElementById("resultado").innerHTML = `Fecha de parto: ${dia} de ${nombreMes} de ${anio}`;
+
+   
+  // Devuelve la fecha resultante en el formato "día de mes de año textualmente"
+  return `${dia} de ${nombreMes} de ${anio}`;
+}
+
+
+
+
+
+  </script>
+  
+  
+</body>
+</html>
