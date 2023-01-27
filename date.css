@@ -44,6 +44,6 @@ button:hover{
 
 
 		background-image: url("img/embara.jpg");
-		background-size: cover;
+		background-size: 150% 200%;
 		background-position: center;
 }
