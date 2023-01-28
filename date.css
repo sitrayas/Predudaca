@@ -16,6 +16,20 @@ input {
 	font-size: 30px;
 }
 
+input {
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+input:focus {
+	
+	/* outline-width: 0; */
+	outline: none;
+	padding-left: 10px;
+	background: rgb(217, 255, 185);
+	color: rgb(35, 19, 19);
+}
+
 button{
 	background-color:rgb(0, 182, 204);
 	padding: 10px 10px;

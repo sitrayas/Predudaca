@@ -14,8 +14,8 @@
             <button type="button" onclick="calcularFechaParto()">Calcular fecha de parto</button>
           </form>
 
-
-<p id="resultado"></p>
+<p style="color: rgb(148, 69, 73);">Fecha de parto:</p>
+<p id="resultado" style="color: rgb(239, 108, 139)"></p>
 
 <script>
     function calcularFechaParto() {
@@ -49,7 +49,7 @@
 
 
       // Muestra el resultado en la página
-      document.getElementById("resultado").innerHTML = `Fecha de parto: ${dia} de ${nombreMes} de ${anio}`;
+      document.getElementById("resultado").innerHTML = `<h2>${dia} de ${nombreMes} de ${anio}</h2>`;
 
    
   // Devuelve la fecha resultante en el formato "día de mes de año textualmente"
