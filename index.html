@@ -3,6 +3,7 @@
     <head>
         <title class="titulo">Calculadora de fecha de parto</title>
         <link rel="stylesheet" type="text/css" href="date.css">
+        
   </head>
     
     <body>
@@ -10,18 +11,24 @@
         <form >
             <label for="ultima-regla"class= "ifur">Ingrese la Fecha de la última regla:</label><br>
             <br>
-            <input type="date" id="ultima-regla"><br><br>
+            <input type="date" id="ultima-regla" min="2020-01-01" max="2024-12-31"><br><br>
             <button type="button" onclick="calcularFechaParto()">Calcular fecha de parto</button>
           </form>
 
-<p style="color: rgb(148, 69, 73);">Fecha de parto:</p>
+<p style="color: rgb(148, 69, 73)"><strong>Probable de Parto:</strong></p>
 <p id="resultado" style="color: rgb(239, 108, 139)"></p>
 
 <script>
     function calcularFechaParto() {
       // Obtiene la fecha de la última regla del formulario
       let ultimaRegla = document.getElementById("ultima-regla").value;
-      
+    
+if (!ultimaRegla) {
+    alert("Escoja una fecha válida");
+    return;
+}
+
+
       // Crea un objeto de fecha a partir de la última regla
       let fecha = new Date(ultimaRegla);
       
@@ -54,6 +61,7 @@
    
   // Devuelve la fecha resultante en el formato "día de mes de año textualmente"
   return `${dia} de ${nombreMes} de ${anio}`;
+  
 }
 
 

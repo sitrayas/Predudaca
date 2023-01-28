@@ -21,5 +21,4 @@ function calcularFechaParto(ultimaRegla) {
   }
   
   // Ejemplo de uso de la función
-  console.log(calcularFechaParto("2022-10-01")); // "8 de enero de 2024"
-  
+  console.log(calcularFechaParto("2022-10-01")); // 
